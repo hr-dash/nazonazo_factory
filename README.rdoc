@@ -1,28 +1,31 @@
-== README
+**なぞなぞファクトリー
+*概要 
+  
+クイズ投稿機能 クイズ回答機能 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**仕様 
 
-Things you may want to cover:
+*phase1 
 
-* Ruby version
+　投稿、回答機能 
+　1問投稿、1問回答形式 
+　回答はラジオボタンの選択式  
+　問題を作成したらURLが作成されて、問題一覧画面に表示される 
+　問題にタイトルをつけることができる 
+　　
 
-* System dependencies
+*phase2 
 
-* Configuration
+　問題を複数投稿できる 
 
-* Database creation
+*phase3 
 
-* Database initialization
+　モバイル画面対応 
 
-* How to run the test suite
+*phase4 
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+デザイン選択？ 
+　回答数？ 
+　正答率？ 
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
