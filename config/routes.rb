@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   resources :quiz_solve
 
+  resources :quiz_results
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
