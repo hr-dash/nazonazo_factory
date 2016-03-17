@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160311000000) do
+ActiveRecord::Schema.define(version: 20160317000000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.string   "answer_text",    null: false
+    t.boolean  "right_or_wrong", null: false
+    t.integer  "quiz_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "answers", ["quiz_id"], name: "index_answers_on_quiz_id", using: :btree
 
   create_table "quiz_titles", force: :cascade do |t|
     t.string   "title",      null: false
@@ -39,5 +49,6 @@ ActiveRecord::Schema.define(version: 20160311000000) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "answers", "quizzes"
   add_foreign_key "quizzes", "quiz_titles"
 end
