@@ -49,3 +49,8 @@ group :development, :test do
   gem 'spring'
 
 end
+
+group :test do
+  gem "shoulda-matchers", '2.6.0'
+  gem "minitest"
+end
