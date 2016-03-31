@@ -9,24 +9,13 @@ RSpec.describe Answer, type: :model do
 
   subject { @answer1 }
 
-  it { should respond_to(:answer_text) }
-  # it { should respond_to(:right_or_wrong) }
-  # it { should respond_to(:quiz_id) }
-  #
-  # it { should be_valid }
-  #
-  # describe "when answer_text is not present" do
-  #   before { @answer1.answer_text = " " }
-  #   it { should_not be_valid }
-  # end
-  #
-  # describe "when right_or_wrong is not present" do
-  #   before { @answer1.right_or_wrong = nil }
-  #   it { should_not be_valid }
-  # end
-  #
-  # describe "when quiz_id is not present" do
-  #   before { @answer1.quiz_id = nil }
-  #   it { should_not be_valid }
-  # end
+  describe "answer_text validate" do
+    it { should validate_presence_of(:answer_text) }
+    it { should ensure_length_of(:answer_text).is_at_least(1) }
+    it { should ensure_length_of(:answer_text).is_at_most(30) }
+  end
+
+  describe "answer_text validate" do
+    it { should validate_presence_of(:quiz_id) }
+  end
 end
