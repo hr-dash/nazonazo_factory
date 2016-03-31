@@ -9,6 +9,10 @@ RSpec.describe Answer, type: :model do
 
   subject { @answer1 }
 
+  describe "belongs_to quiz model" do
+    it { should belong_to(:quiz)}
+  end
+
   describe "answer_text validate" do
     it { should validate_presence_of(:answer_text) }
     it { should ensure_length_of(:answer_text).is_at_least(1) }
